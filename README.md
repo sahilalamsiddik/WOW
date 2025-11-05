@@ -47,5 +47,48 @@ def predict():
     date = request.form['date']
     prediction = forecast_for_date(city, date)
     return render_template('wow.html', result=prediction)
+## 📦 JSON Data Integration
 
+This project relies heavily on **JSON files** for storing, loading, and processing city-specific weather data.  
+Each `.json` file contains structured meteorological information, including temperature, humidity, and precipitation records from **1985 to 2025**.
+
+### 🔹 How JSON is Used
+
+- **Data Storage:** Each city (e.g., `mumbai.json`, `delhi.json`) contains historical and forecast data in JSON format.
+- **Data Loading:** The Flask backend (`weather_predictor.py`) reads and preprocesses JSON data into Pandas DataFrames.
+- **Flexibility:** JSON makes it easy to add new cities—simply drop a new file like `pune.json` into the project folder.
+- **AI/ML Input:** Preprocessed JSON data is used to train and feed the ML model for forecasting.
+
+**Example snippet from a city JSON file:**
+```json
+[
+  {
+    "Date": "2025-03-15",
+    "Temperature": 32.4,
+    "Humidity": 79,
+    "Precipitation": 4.2
+  },
+  {
+    "Date": "2025-03-16",
+    "Temperature": 31.8,
+    "Humidity": 81,
+    "Precipitation": 1.8
+  }
+]
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #0b3d91;
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 6px rgba(255,255,255,0.4);
+}
+
+#otp input {
+  margin-bottom: 18px; /* space between input and button */
+}
 
