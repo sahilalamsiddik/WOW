@@ -104,3 +104,8 @@ Statsmodels
 
 Flask
  — Backend framework
+![Image](https://github.com/user-attachments/assets/5406bd35-c5a0-4b94-b963-2b24fc51864e)
+
+![Image](https://github.com/user-attachments/assets/6feba4f6-c151-47ee-be93-0c3e0c38116e)
+
+![Image](https://github.com/user-attachments/assets/0eb58aa3-11d2-426f-86c5-2f8c32f59105)
