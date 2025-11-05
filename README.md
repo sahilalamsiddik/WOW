@@ -25,5 +25,27 @@ Built to be lightweight, interactive, and intelligent, it provides both insights
 
 ---
 
-## 🧩 Project Structure
+
+---
+
+## 🧠 Code Architecture Overview
+
+The app is built around **modular and maintainable architecture**, combining Flask’s simplicity with ML-backed predictions.
+
+### 1️⃣ `app.py` — The Application Core
+Handles:
+- Web routes (`/`, `/predict`, `/rain`)
+- User requests (city & date inputs)
+- Communication with ML model (`weather_predictor.py`)
+- JSON responses and template rendering
+
+**Example Route:**
+```python
+@app.route('/predict', methods=['POST'])
+def predict():
+    city = request.form['city']
+    date = request.form['date']
+    prediction = forecast_for_date(city, date)
+    return render_template('wow.html', result=prediction)
+
 
